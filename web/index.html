@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{title}</title>
+  <title>{title}</title>
   <meta name="description" content="24/7 Music">
 
-	<meta property="og:title" content="{title}">
+  <meta property="og:title" content="{title}">
   <meta property="og:type" content="website">
-	<meta property="og:url" content="{url}">
+  <meta property="og:url" content="{url}">
 
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="dark-theme.css">
@@ -105,15 +105,14 @@
 </head>
 <body>
   <center>
-				<img src="logo.png" title="{title}" alt="{title}"/><br />
-				<audio id="player" src="{musicurl}"></audio>
+	<img src="logo.png" title="{title}" alt="{title}"/><br />
+	<audio id="player" src="{musicurl}"></audio>
         <div>
             <div id="current" class="current"></div>
             <input type="range" oninput="changeVolume(this.value)" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
             <button id="play" onclick="togglePlay()">Play (spacebar)</button>
         </div>
-
-				<div id="bottom" class="bottom">Link for media players: <a href="{musicurl}">&#x1f517;</a></div>
+	<div id="bottom" class="bottom">Link for media players: <a href="{musicurl}">&#x1f517;</a></div>
   </center>
 </body>
 </html>
