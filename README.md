@@ -1,8 +1,8 @@
 - [Description](#description)
-- [Keyboard shortcuts](#keyboard-shortcuts)
 - [Files](#files)
   * [web/index.html](#web-indexhtml)
   * [cron.sh](#cronsh)
+- [Keyboard shortcuts](#keyboard-shortcuts)
 - [Reverse proxy](#reverse-proxy)
 - [TODO](#todo)
 
