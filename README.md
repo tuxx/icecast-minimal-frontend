@@ -30,9 +30,9 @@ Move the `web/` files to the directory where your webserver will be looking for 
 ## web/index.html
 Replace all the `{title}` `{url}` and `{musicurl}` tags inside this file to the correct ones.
 
-- **title**: Title of your webpage
-- **url**: The full URL of your webpage
-- **musicurl**: The icecast stream url
+- **title**: Title of your webpage (example: *My awesome music*)
+- **url**: The full URL of your webpage (example: *https://my.awesomemusic.com*)
+- **musicurl**: The icecast stream url (example: *https://my.awesomemusic.com/stream.ogg*)
 
 ## cron.sh
 Run this cronjob every minute to fill current.txt in the web directory.
