@@ -2,7 +2,7 @@
 - [Install](#install)
   * [install.sh](#installsh)
   * [cron.sh](#cronsh)
-	* [Reverse proxy](#reverse-proxy)
+  * [Reverse proxy](#reverse-proxy)
 - [Keyboard shortcuts](#keyboard-shortcuts)
 - [TODO](#todo)
 
