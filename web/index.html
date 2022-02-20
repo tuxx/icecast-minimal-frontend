@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{title}</title>
+  <meta name="description" content="24/7 Music">
+
+	<meta property="og:title" content="{title}">
+  <meta property="og:type" content="website">
+	<meta property="og:url" content="{url}">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="dark-theme.css">
+  <script>
+        // Get current song from /current.txt
+        function getCurrent() {
+                var txtFile = new XMLHttpRequest();
+                var allText=document.getElementById('current').innerHTML;
+
+                txtFile.open("GET", '/current.txt', true);
+                txtFile.onreadystatechange = function () {
+                        if (txtFile.readyState === XMLHttpRequest.DONE && txtFile.status == 200) {
+                                allText = txtFile.responseText;
+                                allText = allText.split("\n").join("<br>");
+                        }
+
+                        if(allText != document.getElementById('current').innerHTML) {
+                                document.getElementById('current').innerHTML = allText;
+                        }
+                }
+                txtFile.send(null);
+        }
+
+        // Make sure the current song is loaded
+        window.addEventListener('load', getCurrent);
+
+        // Refresh the current song every 10s
+        setInterval(function(){
+                getCurrent()
+        }, 10000)
+
+        // Toggle play/pause and update the button
+        function togglePlay() {
+                var myAudio = document.getElementById('player');
+                var playButton = document.getElementById('play');
+                if (myAudio.paused) {
+                        myAudio.play();
+                        playButton.innerText = "Pause (spacebar)";
+                }
+                else {
+                        myAudio.pause();
+                        playButton.innerText = "Play (spacebar)";
+                }
+        };
+
+        function setVolume(volume) {
+                var volbar = document.getElementById('volume-bar');
+                var player = document.getElementById('player');
+                volbar.value=volume;
+                player.volume=volume;
+        }
+
+        // Catch spacebar and toggle play/pause
+        document.addEventListener("keydown", keyDownTextField, false);
+        function keyDownTextField(e) {
+                var keyCode = e.keyCode;
+                if(keyCode==32) { // Spacebar
+                        togglePlay();
+                }
+                if(keyCode==187) { // = key
+                        var volbar = document.getElementById('volume-bar');
+                        var curvol = volbar.value;
+                        if(curvol == 1) { // Max volume
+                                return;
+                        }else{
+                                var newvol=parseFloat(curvol) + parseFloat('0.1');
+                                setVolume(newvol.toFixed(1));
+                        }
+
+                }
+                if(keyCode==189) { // - key
+                        var volbar = document.getElementById('volume-bar');
+                        var curvol = volbar.value;
+                        if(curvol == 0) { // Min volume
+                                return;
+                        }else{
+                                var newvol=parseFloat(curvol) - parseFloat('0.1');
+                                setVolume(newvol.toFixed(1));
+                        }
+
+                }
+        }
+
+        // Handle the volume slider
+        function changeVolume(volume) {
+                var player = document.getElementById('player');
+                player.volume=volume;
+        }
+
+  </script>
+
+</head>
+<body>
+  <center>
+				<img src="logo.png" title="{title}" alt="{title}"/><br />
+				<audio id="player" src="{musicurl}"></audio>
+        <div>
+            <div id="current" class="current"></div>
+            <input type="range" oninput="changeVolume(this.value)" id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1">
+            <button id="play" onclick="togglePlay()">Play (spacebar)</button>
+        </div>
+
+				<div id="bottom" class="bottom">Link for media players: <a href="{musicurl}">🔗</a></div>
+  </center>
+</body>
+</html>

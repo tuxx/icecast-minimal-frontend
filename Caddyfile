@@ -1,0 +1,8 @@
+awesome.music.com {
+        root * /path/to/your/web/folder
+        file_server
+
+        route /music.ogg {
+                reverse_proxy localhost:8000
+        }
+}
