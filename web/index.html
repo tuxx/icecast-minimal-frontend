@@ -47,6 +47,7 @@
                 var myAudio = document.getElementById('player');
                 var playButton = document.getElementById('play');
                 if (myAudio.paused) {
+                        myAudio.src="{musicurl}";
                         myAudio.play();
                         playButton.innerText = "Pause (spacebar)";
                 }
