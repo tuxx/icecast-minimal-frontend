@@ -1,9 +1,9 @@
 - [Description](#description)
-- [Files](#files)
-  * [web/index.html](#web-indexhtml)
+- [Install](#install)
+  * [install.sh](#installsh)
   * [cron.sh](#cronsh)
+	* [Reverse proxy](#reverse-proxy)
 - [Keyboard shortcuts](#keyboard-shortcuts)
-- [Reverse proxy](#reverse-proxy)
 - [TODO](#todo)
 
 # Description
@@ -33,17 +33,19 @@ You can change it to whatever music player you are using, my example is for mpd 
 
 Be sure to change the `/your/path/to/current.txt` to the correct web directory that you are hosting this in.
 
+# Reverse proxy
+Set up a reverse proxy that serves the static files and forwards the stream file to your icecast.
+
+Check Caddyfile as an example of how to only forward the stream file to your icecast.
+
+For more info about caddy see https://caddyserver.com/v2
+
 # Keyboard shortcuts
 |Key     |Description      |
 |:------:|:---------------:|
 |spacebar|Toggle play/pause|
 |=       |Volume up        |
 |-       |Volume down      |
-
-# Reverse proxy
-Check Caddyfile as an example of how to only forward the stream file to your icecast.
-
-For more info about caddy see https://caddyserver.com/v2
 
 
 # TODO
