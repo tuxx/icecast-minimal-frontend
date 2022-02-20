@@ -1,3 +1,12 @@
+# Table Of Content
+- [A minimal frontend for icecast](#a-minimal-frontend-for-icecast)
+- [Keyboard shortcuts](#keyboard-shortcuts)
+- [Files](#files)
+  * [web/index.html](#web-indexhtml)
+  * [cron.sh](#cronsh)
+- [Reverse proxy](#reverse-proxy)
+- [TODO](#todo)
+
 # A minimal frontend for icecast
 <p align="center">
   <img src="https://i.postimg.cc/90Ndwsq9/screenshot.png" />
