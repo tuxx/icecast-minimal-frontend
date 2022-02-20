@@ -19,15 +19,12 @@ You can change the logo by placing a logo.png in the web directory.
 Uses plain javascript and standard fonts so no external downloads.
 It only has a play/pause button and a volume slider. 
 
-# Files
-Move the `web/` files to the directory where your webserver will be looking for the files.
+# Install
 
-## web/index.html
-Replace all the `{title}` `{url}` and `{musicurl}` tags inside this file to the correct ones.
+## install.sh
+Edit install.sh and change the `TITLE`, `URL`, and `MUSICURL` variables and run `./install.sh`.
 
-- **title**: Title of your webpage (example: *My awesome music*)
-- **url**: The full URL of your webpage (example: *https://my.awesomemusic.com*)
-- **musicurl**: The icecast stream url (example: *https://my.awesomemusic.com/stream.ogg*)
+This will create a directory called `static/` with the HTML/css files you can copy to your webservers root directory.
 
 ## cron.sh
 Run this cronjob every minute to fill current.txt in the web directory.
@@ -51,7 +48,7 @@ For more info about caddy see https://caddyserver.com/v2
 
 # TODO
 
-- [ ] Make install script so you dont need to manually change things
 - [ ] Less hacky way to get current song
+- [x] Make install script so you dont need to manually change things
 - [X] Drink beer.
 - [X] Raise hell.
