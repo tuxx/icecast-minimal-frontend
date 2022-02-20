@@ -56,11 +56,24 @@
                 }
         };
 
-        function setVolume(volume) {
+        function handleVolumeKey(direction) {
                 var volbar = document.getElementById('volume-bar');
-                var player = document.getElementById('player');
-                volbar.value=volume;
-                player.volume=volume;
+                var curvol = volbar.value;
+                if(direction == "up") {
+                        var maxvol = 1;
+                        var newvol=parseFloat(curvol) + parseFloat('0.1');
+                }else{
+                        var maxvol = 0;
+                        var newvol=parseFloat(curvol) - parseFloat('0.1');
+                }
+
+                if(curvol == maxvol) {
+                        return;
+                }else{
+                        var volume = newvol.toFixed(1);
+												volbar.value=volume;
+												player.volume=volume;
+                }
         }
 
         // Catch spacebar and toggle play/pause
@@ -71,26 +84,10 @@
                         togglePlay();
                 }
                 if(keyCode==187) { // = key
-                        var volbar = document.getElementById('volume-bar');
-                        var curvol = volbar.value;
-                        if(curvol == 1) { // Max volume
-                                return;
-                        }else{
-                                var newvol=parseFloat(curvol) + parseFloat('0.1');
-                                setVolume(newvol.toFixed(1));
-                        }
-
+                        handleVolumeKey("up");
                 }
                 if(keyCode==189) { // - key
-                        var volbar = document.getElementById('volume-bar');
-                        var curvol = volbar.value;
-                        if(curvol == 0) { // Min volume
-                                return;
-                        }else{
-                                var newvol=parseFloat(curvol) - parseFloat('0.1');
-                                setVolume(newvol.toFixed(1));
-                        }
-
+                        handleVolumeKey("down");
                 }
         }
 
