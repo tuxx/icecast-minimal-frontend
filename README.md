@@ -9,7 +9,7 @@
 
 # Description
 <p align="center">
-  <img src="https://i.postimg.cc/90Ndwsq9/screenshot.png" />
+  <img src="https://i.postimg.cc/XJyJVhkq/screenshot-icecast-minimal-frontend.png" />
 </p>
 
 A minimal frontend for icecast so you don't have to expose the icecast interface on the internet.
