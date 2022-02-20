@@ -1,5 +1,7 @@
 # A minimal frontend for icecast
-[screenshot](https://postimg.cc/LgLYrCD4)
+<p align="center">
+  <img src="https://postimg.cc/LgLYrCD4" />
+</p>
 
 A minimal frontend for icecast so you don't have to expose the icecast interface on the internet.
 It reads the current playing song from `/current.txt` which you can fill using a cronjob.
