@@ -1,4 +1,3 @@
-# Table Of Content
 - [Description](#description)
 - [Keyboard shortcuts](#keyboard-shortcuts)
 - [Files](#files)
@@ -21,9 +20,11 @@ Uses plain javascript and standard fonts so no external downloads.
 It only has a play/pause button and a volume slider. 
 
 # Keyboard shortcuts
-- **spacebar**: Toggle play/pause
-- **=**: Volume up
-- **-**: Volume down
+|Key     |Description      |
+|:------:|:---------------:|
+|spacebar|Toggle play/pause|
+|=       |Volume up        |
+|-       |Volume down      |
 
 # Files
 Move the `web/` files to the directory where your webserver will be looking for the files.
