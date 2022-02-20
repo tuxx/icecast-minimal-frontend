@@ -19,13 +19,6 @@ You can change the logo by placing a logo.png in the web directory.
 Uses plain javascript and standard fonts so no external downloads.
 It only has a play/pause button and a volume slider. 
 
-# Keyboard shortcuts
-|Key     |Description      |
-|:------:|:---------------:|
-|spacebar|Toggle play/pause|
-|=       |Volume up        |
-|-       |Volume down      |
-
 # Files
 Move the `web/` files to the directory where your webserver will be looking for the files.
 
@@ -42,6 +35,13 @@ Run this cronjob every minute to fill current.txt in the web directory.
 You can change it to whatever music player you are using, my example is for mpd with the mpc command.
 
 Be sure to change the `/your/path/to/current.txt` to the correct web directory that you are hosting this in.
+
+# Keyboard shortcuts
+|Key     |Description      |
+|:------:|:---------------:|
+|spacebar|Toggle play/pause|
+|=       |Volume up        |
+|-       |Volume down      |
 
 # Reverse proxy
 Check Caddyfile as an example of how to only forward the stream file to your icecast.
