@@ -1,5 +1,5 @@
 # Table Of Content
-- [A minimal frontend for icecast](#a-minimal-frontend-for-icecast)
+- [Description](#description)
 - [Keyboard shortcuts](#keyboard-shortcuts)
 - [Files](#files)
   * [web/index.html](#web-indexhtml)
@@ -7,7 +7,7 @@
 - [Reverse proxy](#reverse-proxy)
 - [TODO](#todo)
 
-# A minimal frontend for icecast
+# Description
 <p align="center">
   <img src="https://i.postimg.cc/90Ndwsq9/screenshot.png" />
 </p>
