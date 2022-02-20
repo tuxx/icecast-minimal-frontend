@@ -49,3 +49,4 @@ For more info about caddy see https://caddyserver.com/v2
 - [ ] Make install script so you dont need to manually change things
 - [ ] Less hacky way to get current song
 - [X] Drink beer.
+- [X] Raise hell.
