@@ -81,8 +81,13 @@
         document.addEventListener("keydown", keyDownTextField, false);
         function keyDownTextField(e) {
                 var keyCode = e.keyCode;
+                var playBtnFocused = (document.activeElement === document.getElementById('play'));
                 if(keyCode==32) { // Spacebar
+                    if(playBtnFocused) {
+                        return;
+                    }else{
                         togglePlay();
+                    }
                 }
                 if(keyCode==187) { // = key
                         handleVolumeKey("up");
